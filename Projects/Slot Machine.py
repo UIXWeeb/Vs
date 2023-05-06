@@ -7,10 +7,6 @@ MIN_BET = 10
 ROWS = 3
 COLS = 5
 
-
-
-
-
 symbol_count = {
     "A": 5,
     "B": 8,
@@ -79,9 +75,6 @@ def get_slot_machine_spin(rows, cols, symbols):
         
     return columns
 
-
-
-
 def print_slots_machine(columns):
     for row in range(len(columns[0])):
         for i,column in enumerate(columns):
@@ -133,17 +126,7 @@ def get_bet(balance, lines):
         else:
             print("Please enter a valid number.")
 
-
 def check_balance(balance, total_bet):
-    """Checks if the balance is greater than or equal to the total bet amount.
-
-    Args:
-        balance (int): The current balance.
-        total_bet (int): The total bet amount.
-
-    Returns:
-        bool: True if the balance is greater than or equal to the total bet amount, False otherwise.
-    """
     return balance >= total_bet
 
 def play_again():
@@ -183,15 +166,8 @@ def update_balance(balance, total_winnings):
     balance += total_winnings
     return balance
 
-
-
-
-
-
-   
+  
 balance = deposit()
-
-   
 while True:
         lines = get_number_of_lines()
 
@@ -220,4 +196,3 @@ while True:
 
         if not play_again():
             break
-   
